@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="brace_top_setup2">
+  name="brace_top_setup">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-6.34878521940663E-06 2.36939571051087E-05 -0.0124319841854543"
+        xyz="-6.34878521932336E-06 2.36939571051364E-05 -0.0124319841854544"
         rpy="0 0 0" />
       <mass
-        value="0.37798" />
+        value="0.48452022632218" />
       <inertia
-        ixx="4.6274453684609294E-05"
-        ixy="5.2749641206197876E-14"
-        ixz="-1.2559109228201754E-14"
-        iyy="0.00046274453690875407"
-        iyz="7.286389403886211E-15"
-        izz="0.0009122372954343905" />
+        ixx="0.000593462876524313"
+        ixy="6.76506178814799E-14"
+        ixz="-1.61068677965287E-14"
+        iyy="0.000593462876604675"
+        iyz="9.34469786707109E-15"
+        izz="0.00116993054766483" />
     </inertial>
     <visual>
       <origin
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/base_link.STL" />
+          filename="package://brace_top_setup/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/base_link.STL" />
+          filename="package://brace_top_setup/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="1.17779409784247E-05 5.7687979422294E-06 0.36999791865092"
+        xyz="1.17779409784524E-05 5.7687979422294E-06 0.36999791865092"
         rpy="0 0 0" />
       <mass
-        value="0.09563" />
+        value="0.144521989507358" />
       <inertia
-        ixx="1.5318129002296172E-05"
-        ixy="2.2005349656772145E-08"
-        ixz="-1.7870153371540252E-09"
-        iyy="1.5335878548166143E-05"
-        iyz="-1.2133936040405393E-08"
-        izz="2.6407689029341297E-05" />
+        ixx="2.31497069846513E-05"
+        ixy="3.32558497563712E-08"
+        ixz="-2.70064845556482E-09"
+        iyy="2.31765311996673E-05"
+        iyz="-1.83375570125938E-08"
+        izz="3.99089381659734E-05" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/Link1.STL" />
+          filename="package://brace_top_setup/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/Link1.STL" />
+          filename="package://brace_top_setup/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -101,17 +101,17 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="-8.14659303255416E-06 0.00672136966498671 -0.175742165491001"
+        xyz="-8.14659303260967E-06 0.00672136966498665 -0.175742165491001"
         rpy="0 0 0" />
       <mass
-        value="1.598" />
+        value="1.55948160838922" />
       <inertia
-        ixx="0.011774288853428351"
-        ixy="9.259475927434329E-08"
-        ixz="-5.305728725987357E-09"
-        iyy="0.011758178645362357"
-        iyz="0.0006791294570922306"
-        izz="0.006673783148236291" />
+        ixx="0.011490479924145"
+        ixy="9.03628436305203E-08"
+        ixz="-5.1778387780329E-09"
+        iyy="0.0114747580385466"
+        iyz="0.000662759635826463"
+        izz="0.00651291744558974" />
     </inertial>
     <visual>
       <origin
@@ -119,7 +119,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/Link2.STL" />
+          filename="package://brace_top_setup/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -133,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup2/meshes/Link2.STL" />
+          filename="package://brace_top_setup/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>

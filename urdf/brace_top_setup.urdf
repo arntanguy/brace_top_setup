@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="brace_top_setup">
+  name="brace_top_setup2">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-3.7337051853048E-12 2.06978323369356E-11 -0.0125273946137766"
+        xyz="-6.34878521940663E-06 2.36939571051087E-05 -0.0124319841854543"
         rpy="0 0 0" />
       <mass
-        value="0.0667407034097946" />
+        value="0.37798" />
       <inertia
-        ixx="1.79778178641139E-05"
-        ixy="-5.2086881559893E-15"
-        ixz="-3.5504167221548E-19"
-        iyy="1.79778178704926E-05"
-        iyz="2.14540049713453E-14"
-        izz="3.31277891361855E-05" />
+        ixx="4.6274453684609294E-05"
+        ixy="5.2749641206197876E-14"
+        ixz="-1.2559109228201754E-14"
+        iyy="0.00046274453690875407"
+        iyz="7.286389403886211E-15"
+        izz="0.0009122372954343905" />
     </inertial>
     <visual>
       <origin
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/base_link.STL" />
+          filename="package://brace_top_setup2/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/base_link.STL" />
+          filename="package://brace_top_setup2/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -48,17 +48,17 @@
     name="Link1">
     <inertial>
       <origin
-        xyz="1.13949187567769E-05 6.09019174707681E-06 -0.00775008134907973"
+        xyz="1.17779409784247E-05 5.7687979422294E-06 0.36999791865092"
         rpy="0 0 0" />
       <mass
-        value="0.018528460193251" />
+        value="0.09563" />
       <inertia
-        ixx="2.96791115187837E-06"
-        ixy="4.26357048158661E-09"
-        ixz="-3.46236981482079E-10"
-        iyy="2.9713501538035E-06"
-        iyz="-2.350968847769E-09"
-        izz="5.11653053409916E-06" />
+        ixx="1.5318129002296172E-05"
+        ixy="2.2005349656772145E-08"
+        ixz="-1.7870153371540252E-09"
+        iyy="1.5335878548166143E-05"
+        iyz="-1.2133936040405393E-08"
+        izz="2.6407689029341297E-05" />
     </inertial>
     <visual>
       <origin
@@ -66,12 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/Link1.STL" />
+          filename="package://brace_top_setup2/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
       </material>
     </visual>
     <collision>
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/Link1.STL" />
+          filename="package://brace_top_setup2/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -88,7 +88,7 @@
     name="Joint1"
     type="fixed">
     <origin
-      xyz="0 0 -0.0249999999999998"
+      xyz="0 0 -0.402748"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -101,17 +101,17 @@
     name="Link2">
     <inertial>
       <origin
-        xyz="9.14243602784942E-08 -0.00708132880105808 0.18646687835287"
+        xyz="-8.14659303255416E-06 0.00672136966498671 -0.175742165491001"
         rpy="0 0 0" />
       <mass
-        value="1.16495586721261" />
+        value="1.598" />
       <inertia
-        ixx="0.008598720119298"
-        ixy="2.46509828936134E-07"
-        ixz="-4.83947111890681E-09"
-        iyy="0.00859047237198942"
-        iyz="-0.000525892790490183"
-        izz="0.00513224729008056" />
+        ixx="0.011774288853428351"
+        ixy="9.259475927434329E-08"
+        ixz="-5.305728725987357E-09"
+        iyy="0.011758178645362357"
+        iyz="0.0006791294570922306"
+        izz="0.006673783148236291" />
     </inertial>
     <visual>
       <origin
@@ -119,7 +119,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/Link2.STL" />
+          filename="package://brace_top_setup2/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -133,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://brace_top_setup/meshes/Link2.STL" />
+          filename="package://brace_top_setup2/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -141,7 +141,7 @@
     name="Joint2"
     type="fixed">
     <origin
-      xyz="0 0 -0.377748"
+      xyz="0 0 0.362"
       rpy="0 0 0" />
     <parent
       link="Link1" />

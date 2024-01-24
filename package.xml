@@ -6,11 +6,16 @@
     <p>This package contains configuration data, 3D models and launch files
 for brace_top_setup robot</p>
   </description>
-  <author>Arnaud TANGUY</author>
-  <maintainer email="arn.tanguy@gmail.com" />
+  <author>TODO</author>
+  <maintainer email="TODO@email.com" />
   <license>BSD</license>
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo</depend>
   <export>
-    <build_type>ament_cmake</build_type>
+    <architecture_independent />
   </export>
 </package>

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.3)
 cmake_policy(SET CMP0048 NEW)
 project(brace_top_setup VERSION 1.0.6)
 
@@ -20,11 +20,10 @@ else()
   set(ROS_VERSION 0)
 endif()
 
-if(${ROS_VERSION} EQUAL 1)
-  catkin_package()
-elseif(${ROS_VERSION} EQUAL 2)
+if(${ROS_VERSION} EQUAL 2)
   set(CATKIN_PACKAGE_SHARE_DESTINATION share/${PROJECT_NAME})
-else()
+elseif(${ROS_VERSION} EQUAL 1)
+  catkin_package()
   set(CATKIN_PACKAGE_SHARE_DESTINATION share/mc_rtc/${PROJECT_NAME})
 
   include(CMakePackageConfigHelpers)
@@ -38,16 +37,25 @@ else()
   install(FILES "${VERSION_CONFIG}" "${PROJECT_CONFIG}" DESTINATION "${CONFIG_INSTALL_DIR}")
   install(FILES package.xml DESTINATION "${CATKIN_PACKAGE_SHARE_DESTINATION}")
 endif()
-		
-install(DIRECTORY convex/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/convex)
-install(DIRECTORY meshes/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes)
-#install(DIRECTORY rsdf/
-#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rsdf)
-install(DIRECTORY urdf/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf)
 
+# install all .txt files in convex folder
+set(dir convex)
+install(DIRECTORY ${dir}/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
+  FILES_MATCHING PATTERN "*.txt")
+
+# install all .urdf files in urdf folder
+set(dir urdf)
+install(DIRECTORY ${dir}/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
+  FILES_MATCHING PATTERN "*.urdf")
+
+# install all .stl or .STL files in meshes folder
+set(dir meshes)
+install(DIRECTORY ${dir}/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
+  FILES_MATCHING PATTERN "*.stl" PATTERN "*.STL")
+		
 if(${ROS_VERSION} EQUAL 2)
   ament_package(CONFIG_EXTRAS cmake/${PROJECT_NAME}_INSTALL_PREFIX.cmake)
 endif()

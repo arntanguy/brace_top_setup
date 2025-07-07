@@ -26,22 +26,19 @@ elseif(${ROS_VERSION} EQUAL 1)
   set(CATKIN_PACKAGE_SHARE_DESTINATION share/mc_rtc/${PROJECT_NAME})
 
   include(CMakePackageConfigHelpers)
-  set(VERSION_CONFIG "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
+  set(VERSION_CONFIG
+      "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
   set(PROJECT_CONFIG "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake")
   set(CONFIG_INSTALL_DIR "lib/cmake/${PROJECT_NAME}")
 
-  configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/ConfigVersion.cmake.in" "${VERSION_CONFIG}"
-    @ONLY
-  )
+  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/ConfigVersion.cmake.in"
+                 "${VERSION_CONFIG}" @ONLY)
   configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake.in" "${PROJECT_CONFIG}"
-    INSTALL_DESTINATION "${CONFIG_INSTALL_DIR}"
-  )
+    INSTALL_DESTINATION "${CONFIG_INSTALL_DIR}")
 
   install(FILES "${VERSION_CONFIG}" "${PROJECT_CONFIG}"
-          DESTINATION "${CONFIG_INSTALL_DIR}"
-  )
+          DESTINATION "${CONFIG_INSTALL_DIR}")
   install(FILES package.xml DESTINATION "${CATKIN_PACKAGE_SHARE_DESTINATION}")
 endif()
 
@@ -51,8 +48,7 @@ install(
   DIRECTORY ${dir}/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
   FILES_MATCHING
-  PATTERN "*.txt"
-)
+  PATTERN "*.txt")
 
 # install all .urdf files in urdf folder
 
@@ -61,8 +57,7 @@ install(
   DIRECTORY ${dir}/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
   FILES_MATCHING
-  PATTERN "*.urdf"
-)
+  PATTERN "*.urdf")
 
 # install all .stl or .STL files in meshes folder
 set(dir meshes)
@@ -71,8 +66,7 @@ install(
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir}
   FILES_MATCHING
   PATTERN "*.stl"
-  PATTERN "*.STL"
-)
+  PATTERN "*.STL")
 
 if(${ROS_VERSION} EQUAL 2)
   ament_package(CONFIG_EXTRAS cmake/${PROJECT_NAME}_INSTALL_PREFIX.cmake)
